@@ -22,6 +22,7 @@ public class UserController {
     public String login() {
       return "login";
   }
+
     @GetMapping("/reg")
     public String reg(@RequestParam(name = "error", defaultValue = "", required = false) String error, Model model) {
       if(error.equals("username")){
@@ -29,6 +30,7 @@ public class UserController {
       }
       return "reg";
     }
+
     @PostMapping("/reg")
     public String addUser(
             @RequestParam String username,
